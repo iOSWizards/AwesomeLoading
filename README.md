@@ -24,7 +24,9 @@ pod "AwesomeLoading", git: 'https://github.com/Mindvalley/Mobile_iOS_Library_Awe
 ```
 ## Usage
 
-Import with cocoapods and be happy. :)
+Import AwesomeLoading to your class, from any UIView in the project:
+**Start animation:** viewName.`startLoadingAnimation()`
+**Stop animation:** viewName.`stopLoadingAnimation()`
 
 ## License
 

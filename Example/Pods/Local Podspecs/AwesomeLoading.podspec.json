@@ -19,6 +19,11 @@
     "ios": "9.0"
   },
   "source_files": "AwesomeLoading/Classes/**/*",
+  "resources": [
+    "AwesomeCore/Classes/Resources/loadingWings.json",
+    "AwesomeCore/Classes/Resources/AwesomeLoadingView.xib"
+  ],
+  "preserve_paths": "AwesomeCore/Classes/Resources/loadingWings.json",
   "resource_bundles": {
     "AwesomeLoading": [
       "AwesomeLoading/Classes/**/*.{storyboard,xib,xcassets,json,imageset,png}"

@@ -20,7 +20,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="266" height="281"/>
                     <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                 </view>
-                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="loadingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lzX-aG-opc">
+                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzX-aG-opc">
                     <rect key="frame" x="88" y="121" width="90" height="39"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="lzX-aG-opc" secondAttribute="height" multiplier="30:13" id="W4a-3Z-rZl"/>
@@ -46,7 +46,4 @@
             <point key="canvasLocation" x="-21" y="-139.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="loadingIcon" width="90" height="39"/>
-    </resources>
 </document>

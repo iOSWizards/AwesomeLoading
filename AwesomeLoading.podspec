@@ -31,6 +31,8 @@ Loading animation for MV apps
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'AwesomeLoading/Classes/**/*'
+  s.resources = ['AwesomeCore/Classes/Resources/loadingWings.json','AwesomeCore/Classes/Resources/AwesomeLoadingView.xib']
+  s.preserve_paths = 'AwesomeCore/Classes/Resources/loadingWings.json'
   
   s.resource_bundles = {
     'AwesomeLoading' => ['AwesomeLoading/Classes/**/*.{storyboard,xib,xcassets,json,imageset,png}']

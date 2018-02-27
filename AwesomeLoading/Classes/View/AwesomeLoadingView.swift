@@ -17,7 +17,7 @@ class AwesomeLoadingView: UIView {
     fileprivate var animating = false
     fileprivate var maxScale: CGFloat = 1.0
     fileprivate var pulseTimer: Timer?
-    fileprivate var animationView = LOTAnimationView(name: "loadingWings")
+    fileprivate var animationView: LOTAnimationView?
     
     static func newInstance() -> AwesomeLoadingView {
         return Bundle(for: self).loadNibNamed("AwesomeLoadingView", owner: self, options: nil)![0] as! AwesomeLoadingView
@@ -55,16 +55,19 @@ extension AwesomeLoadingView {
         //pulse()
         //pulseTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(MVLoadingView.pulse), userInfo: nil, repeats: true)
         
-        animationView.loopAnimation = true
-        animationView.animationSpeed = 1
-        animationView.frame = CGRect(x: (self.frame.size.width/2)-240, y: (self.frame.size.height/2)-135, width: 480, height: 270)
-        self.addSubview(animationView)
-        self.sendSubview(toBack: animationView)
-        
-        animationView.play(completion: { (finished) in
-            print("did complete \(finished)")
-        })
-        
+        animationView = LOTAnimationView(json: loadingWingsJson)
+        if let animationView = self.animationView {
+            animationView.loopAnimation = true
+            animationView.animationSpeed = 1
+            animationView.frame = CGRect(x: (self.frame.size.width/2)-240, y: (self.frame.size.height/2)-135, width: 480, height: 270)
+            self.addSubview(animationView)
+            //self.sendSubview(toBack: animationView)
+            animationView.addShadowLayer()
+            
+            animationView.play(completion: { (finished) in
+                print("did complete \(finished)")
+            })
+        }
     }
     
     func pulse() {
@@ -86,10 +89,10 @@ extension AwesomeLoadingView {
         pulseTimer = nil
         
         UIView.animate(withDuration: 0.1, animations: {
-            self.animationView.transform = CGAffineTransform(scaleX: self.maxScale*0.9, y: self.maxScale*0.9)
+            self.animationView?.transform = CGAffineTransform(scaleX: self.maxScale*0.9, y: self.maxScale*0.9)
         }, completion: { (_) in
             UIView.animate(withDuration: 0.3, animations: {
-                self.animationView.transform = CGAffineTransform(scaleX: self.maxScale*1.4, y: self.maxScale*1.4)
+                self.animationView?.transform = CGAffineTransform(scaleX: self.maxScale*1.4, y: self.maxScale*1.4)
                 self.alpha = 0
             }, completion: { (_) in
                 self.removeFromSuperview()
