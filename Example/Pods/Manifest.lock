@@ -1,0 +1,19 @@
+PODS:
+  - AwesomeLoading (0.1.0):
+    - lottie-ios
+  - lottie-ios (2.5.0)
+
+DEPENDENCIES:
+  - AwesomeLoading (from `../`)
+
+EXTERNAL SOURCES:
+  AwesomeLoading:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AwesomeLoading: 2b0d4aa973eb7ab4e8ae692097ba1755ecdff531
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+
+PODFILE CHECKSUM: 0bb542d796984c686ab159be19b778612163a056
+
+COCOAPODS: 1.4.0

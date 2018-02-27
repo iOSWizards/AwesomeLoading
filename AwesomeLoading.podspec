@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'AwesomeLoading'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of AwesomeLoading.'
+  s.summary          = 'Loading animation for MV apps'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,25 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Loading animation for MV apps
                        DESC
 
-  s.homepage         = 'https://github.com/evandro@itsdayoff.com/AwesomeLoading'
+  s.homepage         = 'https://github.com/Mindvalley/Mobile_iOS_Library_AwesomeLoading'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'evandro@itsdayoff.com' => 'evandro@itsdayoff.com' }
-  s.source           = { :git => 'https://github.com/evandro@itsdayoff.com/AwesomeLoading.git', :tag => s.version.to_s }
+  s.author           = { 'evandro@mindvalley.com' => 'evandro@mindvalley.com' }
+  s.source           = { :git => 'https://github.com/Mindvalley/Mobile_iOS_Library_AwesomeLoading.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'AwesomeLoading/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'AwesomeLoading' => ['AwesomeLoading/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'AwesomeLoading' => ['AwesomeLoading/Classes/**/*.{storyboard,xib,xcassets,json,imageset,png}']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'lottie-ios'
 end

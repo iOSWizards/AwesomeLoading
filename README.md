@@ -11,19 +11,22 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+- iOS 9 or Higher
+- Swift 4
+
 ## Installation
 
 AwesomeLoading is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'AwesomeLoading'
+pod "AwesomeLoading", git: 'https://github.com/Mindvalley/Mobile_iOS_Library_AwesomeLoading', tag: '0.1.0'
 ```
+## Usage
 
-## Author
-
-evandro@itsdayoff.com, evandro@itsdayoff.com
+Import with cocoapods and be happy. :)
 
 ## License
 
-AwesomeLoading is available under the MIT license. See the LICENSE file for more info.
+Mobile_iOS_Library_AwesomeLoading is available under the MIT license. See the LICENSE file for more info.
+
