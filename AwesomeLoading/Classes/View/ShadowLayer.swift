@@ -14,12 +14,11 @@ class ShadowLayer: UIView {
     func setProperties(shadowColor: UIColor,
                               shadowOffset: CGSize,
                               shadowOpacity: Float,
-                              shadowRadius: CGFloat,
-                              cornerRadius: CGFloat) {
+                              shadowRadius: CGFloat) {
         
         backgroundColor = UIColor.clear
         layer.shadowColor = shadowColor.cgColor
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 50).cgPath
         layer.shadowOffset = shadowOffset
         layer.shadowOpacity = shadowOpacity
         layer.shadowRadius = shadowRadius
@@ -66,15 +65,16 @@ extension UIView {
     func addShadowLayer(shadowColor: UIColor = UIColor.black,
                                shadowOffset: CGSize = CGSize(width: 2, height: 2),
                                shadowOpacity: Float = 0.5,
-                               shadowRadius: CGFloat = 4) {
+                               shadowRadius: CGFloat = 4,
+                               size: CGSize) {
         removeShadowLayer()
         
-        let shadowLayer = ShadowLayer(frame: self.frame)
+        let shadowLayer = ShadowLayer(frame: CGRect(origin: CGPoint(), size: size))
+        shadowLayer.center = self.center
         shadowLayer.setProperties(shadowColor: shadowColor,
                                   shadowOffset: shadowOffset,
                                   shadowOpacity: shadowOpacity,
-                                  shadowRadius: self.layer.cornerRadius > 0 ? self.layer.cornerRadius/2 : shadowRadius,
-                                  cornerRadius: self.layer.cornerRadius)
+                                  shadowRadius: self.layer.cornerRadius > 0 ? self.layer.cornerRadius/2 : shadowRadius)
         
         superview?.addSubview(shadowLayer)
         superview?.bringSubview(toFront: self)

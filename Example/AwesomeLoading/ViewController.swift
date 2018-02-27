@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         view.startLoadingAnimation()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.stopLoadingAnimation()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -61,8 +61,7 @@ extension AwesomeLoadingView {
             animationView.animationSpeed = 1
             animationView.frame = CGRect(x: (self.frame.size.width/2)-240, y: (self.frame.size.height/2)-135, width: 480, height: 270)
             self.addSubview(animationView)
-            //self.sendSubview(toBack: animationView)
-            animationView.addShadowLayer()
+            animationView.addShadowLayer(size: CGSize(width: 90, height: 90))
             
             animationView.play(completion: { (finished) in
                 print("did complete \(finished)")
