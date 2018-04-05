@@ -30,7 +30,7 @@ Loading animation for MV apps
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'AwesomeLoading/Classes/**/*'
+  s.source_files = 'AwesomeLoading/Classes/**/*.swift'
   s.resources = ['AwesomeLoading/Classes/Resources/AwesomeLoadingView.xib']
   s.preserve_paths = 'AwesomeLoading/Classes/Resources/AwesomeLoadingView.xib'
   

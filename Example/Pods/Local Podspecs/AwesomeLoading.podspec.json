@@ -18,12 +18,11 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "AwesomeLoading/Classes/**/*",
+  "source_files": "AwesomeLoading/Classes/**/*.swift",
   "resources": [
-    "AwesomeCore/Classes/Resources/loadingWings.json",
-    "AwesomeCore/Classes/Resources/AwesomeLoadingView.xib"
+    "AwesomeLoading/Classes/Resources/AwesomeLoadingView.xib"
   ],
-  "preserve_paths": "AwesomeCore/Classes/Resources/loadingWings.json",
+  "preserve_paths": "AwesomeLoading/Classes/Resources/AwesomeLoadingView.xib",
   "resource_bundles": {
     "AwesomeLoading": [
       "AwesomeLoading/Classes/**/*.{storyboard,xib,xcassets,json,imageset,png}"
