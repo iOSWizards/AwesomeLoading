@@ -59,9 +59,11 @@ extension AwesomeLoadingView {
         if let animationView = self.animationView {
             animationView.loopAnimation = true
             animationView.animationSpeed = 1
-            animationView.frame = CGRect(x: (self.frame.size.width/2)-240, y: (self.frame.size.height/2)-135, width: 480, height: 270)
+            //animationView.frame = CGRect(x: (self.frame.size.width/2)-240, y: (self.frame.size.height/2)-135, width: 480, height: 270)
+            let scale: CGFloat = 1.5
+            animationView.frame = CGRect(x: (self.frame.size.width/2)-(240*scale), y: (self.frame.size.height/2)-(135*scale), width: 480*scale, height: 270*scale)
             self.addSubview(animationView)
-            animationView.addShadowLayer(size: CGSize(width: 90, height: 90))
+            //animationView.addShadowLayer(size: CGSize(width: 90, height: 90))
             
             animationView.play(completion: { (finished) in
                 print("did complete \(finished)")
@@ -83,6 +85,7 @@ extension AwesomeLoadingView {
     
     func hide() {
         animating = false
+        animationView?.stop()
         
         pulseTimer?.invalidate()
         pulseTimer = nil
@@ -91,7 +94,7 @@ extension AwesomeLoadingView {
             self.animationView?.transform = CGAffineTransform(scaleX: self.maxScale*0.9, y: self.maxScale*0.9)
         }, completion: { (_) in
             UIView.animate(withDuration: 0.3, animations: {
-                self.animationView?.transform = CGAffineTransform(scaleX: self.maxScale*1.4, y: self.maxScale*1.4)
+                self.animationView?.transform = CGAffineTransform(scaleX: self.maxScale*2, y: self.maxScale*2)
                 self.alpha = 0
             }, completion: { (_) in
                 self.removeFromSuperview()
