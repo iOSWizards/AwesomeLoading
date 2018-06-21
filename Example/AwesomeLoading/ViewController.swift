@@ -11,13 +11,17 @@ import AwesomeLoading
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var shimmeringImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        shimmeringImage.startShimmerAnimation()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         view.startLoadingAnimation()
+        shimmeringImage.startShimmerAnimation()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
