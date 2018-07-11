@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        view.startLoadingAnimation()
+        view.startLoadingAnimation(json: loadingWingsJson)
         shimmeringImage.startShimmerAnimation()
     }
     

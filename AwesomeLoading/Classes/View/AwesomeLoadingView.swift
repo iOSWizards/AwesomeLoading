@@ -32,7 +32,7 @@ class AwesomeLoadingView: UIView {
 
 extension AwesomeLoadingView {
     
-    func show() {
+    func show(json: [AnyHashable: Any]) {
         animating = true
         
         if self.frame.size.width < self.iconImageView.frame.size.width*1.2 {
@@ -55,7 +55,7 @@ extension AwesomeLoadingView {
         //pulse()
         //pulseTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(MVLoadingView.pulse), userInfo: nil, repeats: true)
         
-        animationView = LOTAnimationView(json: loadingWingsJson)
+        animationView = LOTAnimationView(json: json)
         if let animationView = self.animationView {
             animationView.loopAnimation = true
             animationView.animationSpeed = 1
@@ -111,14 +111,14 @@ extension AwesomeLoadingView {
 
 extension UIView {
     
-    public func startLoadingAnimationDelayed(_ delay: Double) {
+    public func startLoadingAnimationDelayed(_ delay: Double, withJson: [AnyHashable: Any]) {
         let delayTime = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: delayTime) {
-            self.startLoadingAnimation()
+            self.startLoadingAnimation(json: withJson)
         }
     }
     
-    public func startLoadingAnimation() {
+    public func startLoadingAnimation(json: [AnyHashable: Any]) {
         stopLoadingAnimation()
         
         DispatchQueue.main.async {
@@ -128,7 +128,7 @@ extension UIView {
             
             loadingView.constraintToSuperview()
 
-            loadingView.show()
+            loadingView.show(json: json)
         }
     }
     
