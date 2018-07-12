@@ -2,7 +2,7 @@
 //  AwesomeLoading.swift
 //  AwesomeLoading
 //
-//  Created by Evandro Harrison Hoffmann on 7/12/18.
+//  Created by Emmanuel on 12/07/2018.
 //
 
 import Foundation
