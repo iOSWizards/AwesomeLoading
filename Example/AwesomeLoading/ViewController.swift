@@ -14,11 +14,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var shimmeringImage: UIImageView!
     @IBOutlet var startButton: UIView!
     @IBOutlet var stopButton: UIView!
+    @IBOutlet weak var customView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AwesomeLoading.defaultAnimationJson = "beacon"
+        AwesomeLoading.defaultAnimationSize = CGSize(width: 100, height: 100)
+        
         // Do any additional setup after loading the view, typically from a nib.
         shimmeringImage.startShimmerAnimation()
+        customView.startLoadingAnimation(json: "beacon")
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -35,7 +41,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func start(_ sender: Any) {
-        view.startLoadingAnimation(json: loadingWingsJson) // pass in nil for default loading
+        view.startLoadingAnimation(json: "beacon") // pass in nil for default loading
         shimmeringImage.startShimmerAnimation()
     }
     

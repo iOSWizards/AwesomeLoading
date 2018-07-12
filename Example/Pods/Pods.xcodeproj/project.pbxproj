@@ -10,6 +10,7 @@
 		06853BA6CBEA8C1569359783FDA950FC /* LOTShapeCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B10861EF4CE2EB577D2025CC276915 /* LOTShapeCircle.m */; };
 		0794164D5043A9EEC91694DC8420E6E3 /* LOTMaskContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3324F80E3129AF33936183DE43E2607F /* LOTMaskContainer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		092C9DCF8406FF0C5B91ABD5DC856243 /* LOTLayerGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = DCD02A5E3270FDD762B29ED5E999F478 /* LOTLayerGroup.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0ACF06D920F74987003B07D9 /* AwesomeLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF06D820F74987003B07D9 /* AwesomeLoading.swift */; };
 		0BF463DF35A096EF301D8B859F0F6828 /* LOTShapeStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F557DA20173D6357B01C4284B48619D /* LOTShapeStroke.m */; };
 		0FA098A642F33216D6F397FF40F9936F /* LOTValueDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D3496B4DAA03CFAE5478A8F8342AE76 /* LOTValueDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1338C5A0F633AB503146BE08C8C6C5BC /* lottie-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A3646C87EA1A82FF4DF30496379A7C /* lottie-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,6 +18,7 @@
 		14C56B0120DB9BFB00B93595 /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C56B0020DB9BFB00B93595 /* ShimmerEffect.swift */; };
 		14C56B0320DB9C6E00B93595 /* ShimmerUIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C56B0220DB9C6E00B93595 /* ShimmerUIViewExtensions.swift */; };
 		14C56B0520DB9CD600B93595 /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C56B0420DB9CD600B93595 /* ObjectAssociation.swift */; };
+		14E7485620F726FB00C10784 /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7485520F726FB00C10784 /* FileLoader.swift */; };
 		150DF1A79DF91C61F9504DD208FDCD23 /* LOTShapeTrimPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 720BD2E8565F7D06FED76009AB768B84 /* LOTShapeTrimPath.m */; };
 		16E2D7C360285B233801C41904399B4F /* Pods-AwesomeLoading_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 170D44D3053B811A97B7C3F61C0AE997 /* Pods-AwesomeLoading_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16F14065CD3F81A4EB5435D9D2D99B9A /* ShadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25DD311E6C2FEF6750E3FC8C7F9EC5D /* ShadowLayer.swift */; };
@@ -203,6 +205,7 @@
 		083C59F96F246D4E9A09E198B7197503 /* LOTRenderGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTRenderGroup.m; path = "lottie-ios/Classes/RenderSystem/RenderNodes/LOTRenderGroup.m"; sourceTree = "<group>"; };
 		084F56EB617BFA27C4B03377964C8F8E /* LOTRepeaterRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LOTRepeaterRenderer.h; path = "lottie-ios/Classes/RenderSystem/RenderNodes/LOTRepeaterRenderer.h"; sourceTree = "<group>"; };
 		0888329DEA39ABD9BA84CA523A2C2E70 /* LOTStrokeRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LOTStrokeRenderer.h; path = "lottie-ios/Classes/RenderSystem/RenderNodes/LOTStrokeRenderer.h"; sourceTree = "<group>"; };
+		0ACF06D820F74987003B07D9 /* AwesomeLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeLoading.swift; sourceTree = "<group>"; };
 		0CCD7A746ED6915151608E75DEC03B2A /* LOTInterpolatorCallback.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTInterpolatorCallback.m; path = "lottie-ios/Classes/Private/LOTInterpolatorCallback.m"; sourceTree = "<group>"; };
 		0D183D655A2E192E1A9F86B5EC77BC78 /* LOTTrimPathNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTTrimPathNode.m; path = "lottie-ios/Classes/RenderSystem/ManipulatorNodes/LOTTrimPathNode.m"; sourceTree = "<group>"; };
 		0EAB796FF36AAC06D58181721222AED4 /* Pods-AwesomeLoading_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AwesomeLoading_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -215,6 +218,7 @@
 		14C56B0020DB9BFB00B93595 /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
 		14C56B0220DB9C6E00B93595 /* ShimmerUIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerUIViewExtensions.swift; sourceTree = "<group>"; };
 		14C56B0420DB9CD600B93595 /* ObjectAssociation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectAssociation.swift; path = AwesomeLoading/Classes/ObjectAssociation.swift; sourceTree = "<group>"; };
+		14E7485520F726FB00C10784 /* FileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileLoader.swift; path = AwesomeLoading/Classes/FileLoader.swift; sourceTree = "<group>"; };
 		15E03508F960EFA5F0EDBEA1E47215EA /* LOTAnimationTransitionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTAnimationTransitionController.m; path = "lottie-ios/Classes/Private/LOTAnimationTransitionController.m"; sourceTree = "<group>"; };
 		16A6C372AA4849C8D708FB7943BF4F86 /* lottie-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.xcconfig"; sourceTree = "<group>"; };
 		170D44D3053B811A97B7C3F61C0AE997 /* Pods-AwesomeLoading_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AwesomeLoading_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -673,8 +677,10 @@
 		B228E8705ADC5D255FCE0B143956E268 /* AwesomeLoading */ = {
 			isa = PBXGroup;
 			children = (
+				0ACF06D820F74987003B07D9 /* AwesomeLoading.swift */,
 				B3A004DD19847C38CA84CD37518B7568 /* AwesomeLoadingAnimation.swift */,
 				6E51A78BCA1C5C3ABE5A97923923AE2D /* AwesomeLoadingView.swift */,
+				14E7485520F726FB00C10784 /* FileLoader.swift */,
 				F25DD311E6C2FEF6750E3FC8C7F9EC5D /* ShadowLayer.swift */,
 				14C56B0420DB9CD600B93595 /* ObjectAssociation.swift */,
 				14C56AFD20DB9B8A00B93595 /* Shimmer */,
@@ -974,12 +980,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACF06D920F74987003B07D9 /* AwesomeLoading.swift in Sources */,
 				14C56B0320DB9C6E00B93595 /* ShimmerUIViewExtensions.swift in Sources */,
 				4219B22DFF1FFB2E92ED869A85ED3803 /* AwesomeLoading-dummy.m in Sources */,
 				41EF90B556396DB2CE777A1BBAC041D8 /* AwesomeLoadingAnimation.swift in Sources */,
 				14C56AFF20DB9BA700B93595 /* ShimmerView.swift in Sources */,
 				7FE88C4F8397102AE63BAB1438A66A26 /* AwesomeLoadingView.swift in Sources */,
 				14C56B0120DB9BFB00B93595 /* ShimmerEffect.swift in Sources */,
+				14E7485620F726FB00C10784 /* FileLoader.swift in Sources */,
 				14C56B0520DB9CD600B93595 /* ObjectAssociation.swift in Sources */,
 				16F14065CD3F81A4EB5435D9D2D99B9A /* ShadowLayer.swift in Sources */,
 			);
