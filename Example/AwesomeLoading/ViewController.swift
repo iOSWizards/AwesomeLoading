@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var shimmeringImage: UIImageView!
     @IBOutlet var startButton: UIView!
     @IBOutlet var stopButton: UIView!
+    @IBOutlet weak var customView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         shimmeringImage.startShimmerAnimation()
+        customView.startLoadingAnimation(json: "beacon")
     }
 
     override func viewDidAppear(_ animated: Bool) {

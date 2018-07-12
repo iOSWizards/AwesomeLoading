@@ -73,11 +73,21 @@
                                     <constraint firstAttribute="width" constant="150" id="0mA-bK-Kcc"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDS-R8-hEc">
+                                <rect key="frame" x="147" y="181" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Aoy-uv-kms"/>
+                                    <constraint firstAttribute="width" constant="80" id="xHa-W2-lou"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.2156862745" green="0.23137254900000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="LDS-R8-hEc" firstAttribute="centerX" secondItem="K69-J1-Jnm" secondAttribute="centerX" id="49n-1q-pwI"/>
                             <constraint firstItem="eFA-l1-Fyx" firstAttribute="top" secondItem="K69-J1-Jnm" secondAttribute="bottom" constant="128" id="4XS-sl-cWk"/>
                             <constraint firstItem="Z7K-7w-Cte" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="N58-sE-Y03"/>
+                            <constraint firstItem="K69-J1-Jnm" firstAttribute="top" secondItem="LDS-R8-hEc" secondAttribute="bottom" constant="8" id="R7m-Ze-u2r"/>
                             <constraint firstItem="K69-J1-Jnm" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="RbV-6Y-eQT"/>
                             <constraint firstItem="K69-J1-Jnm" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="VaR-wQ-PSk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Z7K-7w-Cte" secondAttribute="trailing" constant="40" id="ccj-I5-pBf"/>
@@ -86,6 +96,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="customView" destination="LDS-R8-hEc" id="K03-FL-pra"/>
                         <outlet property="shimmeringImage" destination="K69-J1-Jnm" id="9Or-nO-Tkd"/>
                         <outlet property="startButton" destination="kh9-bI-dsS" id="e7A-ne-wcW"/>
                         <outlet property="stopButton" destination="kh9-bI-dsS" id="FAU-Xe-g4d"/>
@@ -93,6 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
