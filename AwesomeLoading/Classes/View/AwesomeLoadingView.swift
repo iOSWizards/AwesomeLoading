@@ -118,28 +118,31 @@ extension AwesomeLoadingView {
             })
         })
     }
+    
 }
 
 extension UIView {
     
-    public func startLoadingAnimationDelayed(_ delay: Double, withJson: [AnyHashable: Any]) {
+    public func startLoadingAnimationDelayed(_ delay: Double, withJson: String, bundle: Bundle? = nil) {
         let delayTime = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: delayTime) {
-            self.startLoadingAnimation(json: withJson)
+            self.startLoadingAnimation(json: withJson, bundle: bundle)
         }
     }
     
-    public func startLoadingAnimation(json: [AnyHashable: Any]? = nil) {
+    public func startLoadingAnimation(json: String? = nil, bundle: Bundle? = nil) {
         stopLoadingAnimation()
         
         DispatchQueue.main.async {
             let loadingView = AwesomeLoadingView.newInstance()
+            
+            let jsonAnimation = FileLoader.shared.loadJSONFrom(file: json, fromBundle: bundle) as? [AnyHashable: Any]
             loadingView.frame = self.bounds
             self.addSubview(loadingView)
             
             loadingView.constraintToSuperview()
 
-            loadingView.show(json: json)
+            loadingView.show(json: jsonAnimation)
         }
     }
     

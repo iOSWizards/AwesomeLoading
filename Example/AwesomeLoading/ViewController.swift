@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func start(_ sender: Any) {
-        view.startLoadingAnimation(json: loadingWingsJson) // pass in nil for default loading
+        view.startLoadingAnimation(json: "beacon") // pass in nil for default loading
         shimmeringImage.startShimmerAnimation()
     }
     
