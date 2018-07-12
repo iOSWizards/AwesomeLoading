@@ -34,7 +34,7 @@ class AwesomeLoadingView: UIView {
 
 extension AwesomeLoadingView {
     
-    func show(json: [AnyHashable: Any]?) {
+    func show(json: [AnyHashable: Any]?, size: CGSize?) {
         animating = true
         
         if self.frame.size.width < self.iconImageView.frame.size.width*1.2 {
@@ -71,21 +71,19 @@ extension AwesomeLoadingView {
             animationView.loopAnimation = true
             animationView.animationSpeed = 1
             //animationView.frame = CGRect(x: (self.frame.size.width/2)-240, y: (self.frame.size.height/2)-135, width: 480, height: 270)
-            let scale: CGFloat = 1.5
             self.addSubview(animationView)
             //animationView.addShadowLayer(size: CGSize(width: 90, height: 90))
             
-//            animationView.translatesAutoresizingMaskIntoConstraints = false
-//
-//            addConstraint(NSLayoutConstraint(item: animationView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 480*scale))
-//            addConstraint(NSLayoutConstraint(item: animationView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 270*scale))
-//            addConstraint(NSLayoutConstraint(item: animationView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
-//            addConstraint(NSLayoutConstraint(item: animationView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
-            
             animationView.translatesAutoresizingMaskIntoConstraints = false
+
+            if let size = size {
+                addConstraint(NSLayoutConstraint(item: animationView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: size.width))
+                addConstraint(NSLayoutConstraint(item: animationView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: size.height))
+            } else {
+                addConstraint(NSLayoutConstraint(item: animationView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1, constant: 0))
+                addConstraint(NSLayoutConstraint(item: animationView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 1, constant: 0))
+            }
             
-            addConstraint(NSLayoutConstraint(item: animationView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1, constant: 0))
-            addConstraint(NSLayoutConstraint(item: animationView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 1, constant: 0))
             addConstraint(NSLayoutConstraint(item: animationView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
             addConstraint(NSLayoutConstraint(item: animationView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
             
@@ -137,7 +135,9 @@ extension UIView {
         }
     }
     
-    public func startLoadingAnimation(json: String? = nil, bundle: Bundle? = nil) {
+    public func startLoadingAnimation(json: String? = AwesomeLoading.defaultJsonAnimation,
+                                      bundle: Bundle? = AwesomeLoading.defaultAnimationBundle,
+                                      size: CGSize? = AwesomeLoading.defaultAnimationSize) {
         stopLoadingAnimation()
         
         DispatchQueue.main.async {
@@ -149,7 +149,7 @@ extension UIView {
             
             loadingView.constraintToSuperview()
 
-            loadingView.show(json: jsonAnimation)
+            loadingView.show(json: jsonAnimation, size: size)
         }
     }
     
