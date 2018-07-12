@@ -20,13 +20,14 @@ AwesomeLoading is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "AwesomeLoading", git: 'https://github.com/iOSWizards/AwesomeLoading', tag: '0.1.3'
+pod "AwesomeLoading", git: 'https://github.com/iOSWizards/AwesomeLoading', tag: '0.1.4'
 ```
 ## Usage
 
 Import AwesomeLoading to your class, from any UIView in the project:
-**Start animation:** viewName.`startLoadingAnimation(json: JsonAnimation)`
-**Stop animation:** viewName.`stopLoadingAnimation()`
+**Start Custom Animation:** viewName.`startLoadingAnimation(json: JsonAnimation)`
+**Start Default Animation:** viewName.`startLoadingAnimation(json: nil)`
+**Stop Animation:** viewName.`stopLoadingAnimation()`
 
 ## License
 
