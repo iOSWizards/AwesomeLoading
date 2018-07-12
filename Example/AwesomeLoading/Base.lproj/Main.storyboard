@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7K-7w-Cte">
-                                <rect key="frame" x="56" y="70" width="263" height="34"/>
+                                <rect key="frame" x="56" y="70" width="263" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -35,18 +35,60 @@
                                     <constraint firstAttribute="width" constant="240" id="tRU-WB-CkI"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eFA-l1-Fyx">
+                                <rect key="frame" x="112" y="525" width="150" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8t8-C3-OPo">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                        <color key="backgroundColor" red="0.19215686274509802" green="0.58431372549019611" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="start:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yck-Tb-wb1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nt1-wg-ekZ">
+                                        <rect key="frame" x="78" y="0.0" width="72" height="30"/>
+                                        <color key="backgroundColor" red="0.19215686269999999" green="0.58431372550000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="stop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YYY-eg-fAq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0mA-bK-Kcc"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.2156862745" green="0.23137254900000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="eFA-l1-Fyx" firstAttribute="top" secondItem="K69-J1-Jnm" secondAttribute="bottom" constant="128" id="4XS-sl-cWk"/>
                             <constraint firstItem="Z7K-7w-Cte" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="N58-sE-Y03"/>
                             <constraint firstItem="K69-J1-Jnm" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="RbV-6Y-eQT"/>
                             <constraint firstItem="K69-J1-Jnm" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="VaR-wQ-PSk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Z7K-7w-Cte" secondAttribute="trailing" constant="40" id="ccj-I5-pBf"/>
+                            <constraint firstItem="eFA-l1-Fyx" firstAttribute="centerX" secondItem="K69-J1-Jnm" secondAttribute="centerX" id="fbB-bL-uMb"/>
                             <constraint firstItem="Z7K-7w-Cte" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="yXI-zL-Sfm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="shimmeringImage" destination="K69-J1-Jnm" id="9Or-nO-Tkd"/>
+                        <outlet property="startButton" destination="kh9-bI-dsS" id="e7A-ne-wcW"/>
+                        <outlet property="stopButton" destination="kh9-bI-dsS" id="FAU-Xe-g4d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
