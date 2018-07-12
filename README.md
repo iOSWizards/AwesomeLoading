@@ -31,6 +31,16 @@ Import AwesomeLoading to your class, from any UIView in the project:
 **Start (DELAYED) Custom Animation:** viewName.`startLoadingAnimationDelayed(delay: 3.0,json: "customLoadingJSONFileName", bundle: Custom.bundle)`
 **Stop Animation:** viewName.`stopLoadingAnimation()`
 
+### For default animations:
+
+First:
+**Default Json:** `AwesomeLoading.defaultJsonAnimation = "beacon"`
+**Default Bundle:** `AwesomeLoading.defaultAnimationBundle = Bundle.main`
+**Default Size:** `AwesomeLoading.defaultAnimationSize = CGSize(width: 100, height: 100)`
+
+Then:
+**Default animation:** viewName.`startLoadingAnimation()`
+
 ## License
 
 AwesomeLoading is available under the MIT license. See the LICENSE file for more info.
