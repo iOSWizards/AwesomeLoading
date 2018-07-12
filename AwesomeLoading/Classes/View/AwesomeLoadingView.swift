@@ -65,7 +65,7 @@ extension AwesomeLoadingView {
             activityIndicator.hidesWhenStopped = true
             activityIndicator.activityIndicatorViewStyle = .whiteLarge
             activityIndicator.startAnimating()
-            superview?.addSubview(activityIndicator)
+            self.addSubview(activityIndicator)
         }
         if let animationView = self.animationView {
             animationView.loopAnimation = true

@@ -26,7 +26,7 @@ pod "AwesomeLoading", git: 'https://github.com/iOSWizards/AwesomeLoading', tag: 
 
 Import AwesomeLoading to your class, from any UIView in the project:
 **Start Custom Animation:** viewName.`startLoadingAnimation(json: JsonAnimation)`
-**Start Default Animation:** viewName.`startLoadingAnimation(json: nil)`
+**Start Default ActivityIndicator Animation:** viewName.`startLoadingAnimation()`
 **Stop Animation:** viewName.`stopLoadingAnimation()`
 
 ## License
