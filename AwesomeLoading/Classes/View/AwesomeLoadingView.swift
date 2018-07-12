@@ -129,7 +129,7 @@ extension UIView {
         }
     }
     
-    public func startLoadingAnimation(json: [AnyHashable: Any]?) {
+    public func startLoadingAnimation(json: [AnyHashable: Any]? = nil) {
         stopLoadingAnimation()
         
         DispatchQueue.main.async {
