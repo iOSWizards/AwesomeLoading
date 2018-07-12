@@ -12,6 +12,8 @@ import AwesomeLoading
 class ViewController: UIViewController {
 
     @IBOutlet weak var shimmeringImage: UIImageView!
+    @IBOutlet var startButton: UIView!
+    @IBOutlet var stopButton: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +22,7 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        view.startLoadingAnimation()
-        shimmeringImage.startShimmerAnimation()
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -31,6 +32,15 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func start(_ sender: Any) {
+        view.startLoadingAnimation(json: loadingWingsJson) // pass in nil for default loading
+        shimmeringImage.startShimmerAnimation()
+    }
+    
+    @IBAction func stop(_ sender: Any) {
+        view.stopLoadingAnimation()
     }
 
 }

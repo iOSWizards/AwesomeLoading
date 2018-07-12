@@ -19,6 +19,8 @@ class AwesomeLoadingView: UIView {
     fileprivate var pulseTimer: Timer?
     fileprivate var animationView: LOTAnimationView?
     
+    fileprivate let activityIndicator = UIActivityIndicatorView()
+    
     static func newInstance() -> AwesomeLoadingView {
         return Bundle(for: self).loadNibNamed("AwesomeLoadingView", owner: self, options: nil)![0] as! AwesomeLoadingView
     }
@@ -32,7 +34,7 @@ class AwesomeLoadingView: UIView {
 
 extension AwesomeLoadingView {
     
-    func show() {
+    func show(json: [AnyHashable: Any]?) {
         animating = true
         
         if self.frame.size.width < self.iconImageView.frame.size.width*1.2 {
@@ -55,7 +57,16 @@ extension AwesomeLoadingView {
         //pulse()
         //pulseTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(MVLoadingView.pulse), userInfo: nil, repeats: true)
         
-        animationView = LOTAnimationView(json: loadingWingsJson)
+        if let json = json {
+            animationView = LOTAnimationView(json: json)
+        } else {
+            // load default animation
+            activityIndicator.center = self.center
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.activityIndicatorViewStyle = .whiteLarge
+            activityIndicator.startAnimating()
+            self.addSubview(activityIndicator)
+        }
         if let animationView = self.animationView {
             animationView.loopAnimation = true
             animationView.animationSpeed = 1
@@ -111,14 +122,14 @@ extension AwesomeLoadingView {
 
 extension UIView {
     
-    public func startLoadingAnimationDelayed(_ delay: Double) {
+    public func startLoadingAnimationDelayed(_ delay: Double, withJson: [AnyHashable: Any]) {
         let delayTime = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: delayTime) {
-            self.startLoadingAnimation()
+            self.startLoadingAnimation(json: withJson)
         }
     }
     
-    public func startLoadingAnimation() {
+    public func startLoadingAnimation(json: [AnyHashable: Any]? = nil) {
         stopLoadingAnimation()
         
         DispatchQueue.main.async {
@@ -128,7 +139,7 @@ extension UIView {
             
             loadingView.constraintToSuperview()
 
-            loadingView.show()
+            loadingView.show(json: json)
         }
     }
     
@@ -137,6 +148,8 @@ extension UIView {
             for subview in self.subviews {
                 if let subview = subview as? AwesomeLoadingView {
                     subview.hide()
+                } else if let subview = subview as? UIActivityIndicatorView {
+                    subview.stopAnimating()
                 }
             }
         }

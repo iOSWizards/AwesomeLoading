@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F0006F89F76506F2F97DB6A /* Pods_AwesomeLoading_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6F32D227A7F95E511117D5 /* Pods_AwesomeLoading_Example.framework */; };
+		1473F27020E09E290080A80F /* AwesomeLoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473F26F20E09E290080A80F /* AwesomeLoadingAnimation.swift */; };
 		5F0EE233EC5E63034AFC15FD /* Pods_AwesomeLoading_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F082CF3D9BE9E5EFC7352076 /* Pods_AwesomeLoading_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1473F26F20E09E290080A80F /* AwesomeLoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeLoadingAnimation.swift; sourceTree = "<group>"; };
 		4EFC42C3E43949182DB6F632 /* AwesomeLoading.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AwesomeLoading.podspec; path = ../AwesomeLoading.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5C6F32D227A7F95E511117D5 /* Pods_AwesomeLoading_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeLoading_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E652451EB07F68316DC6C2F /* Pods-AwesomeLoading_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeLoading_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeLoading_Tests/Pods-AwesomeLoading_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				1473F26F20E09E290080A80F /* AwesomeLoadingAnimation.swift */,
 			);
 			name = "Example for AwesomeLoading";
 			path = AwesomeLoading;
@@ -220,6 +223,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 496E7TU5N4;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -374,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				1473F27020E09E290080A80F /* AwesomeLoadingAnimation.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +558,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D079D754D64C6E40AE0E6839 /* Pods-AwesomeLoading_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 496E7TU5N4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -574,6 +580,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E652451EB07F68316DC6C2F /* Pods-AwesomeLoading_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 496E7TU5N4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
