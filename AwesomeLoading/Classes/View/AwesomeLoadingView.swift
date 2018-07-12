@@ -135,7 +135,7 @@ extension UIView {
         }
     }
     
-    public func startLoadingAnimation(json: String? = AwesomeLoading.defaultJsonAnimation,
+    public func startLoadingAnimation(json: String? = AwesomeLoading.defaultAnimationJson,
                                       bundle: Bundle? = AwesomeLoading.defaultAnimationBundle,
                                       size: CGSize? = AwesomeLoading.defaultAnimationSize) {
         stopLoadingAnimation()

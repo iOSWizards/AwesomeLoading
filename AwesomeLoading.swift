@@ -9,7 +9,7 @@ import Foundation
 
 public struct AwesomeLoading {
     
-    public static var defaultJsonAnimation: String?
+    public static var defaultAnimationJson: String?
     public static var defaultAnimationBundle: Bundle?
     public static var defaultAnimationSize: CGSize?
     

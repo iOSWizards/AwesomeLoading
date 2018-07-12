@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AwesomeLoading.defaultJsonAnimation = "beacon"
+        AwesomeLoading.defaultAnimationJson = "beacon"
         AwesomeLoading.defaultAnimationSize = CGSize(width: 100, height: 100)
         
         // Do any additional setup after loading the view, typically from a nib.
