@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AwesomeLoading
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        AwesomeLoading.defaultShimmerTint = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.2)
+        AwesomeLoading.defaultShimmerHighlight = .blue
+        
         return true
     }
 
