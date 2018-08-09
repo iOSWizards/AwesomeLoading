@@ -8,7 +8,7 @@
 import UIKit
 
 class ShimmerView: UIView, ShimmerEffect {
-    override open static var layerClass: AnyClass {
+    override public static var layerClass: AnyClass {
         return CAGradientLayer.self
     }
     
@@ -32,13 +32,13 @@ class ShimmerView: UIView, ShimmerEffect {
 
 extension UIView {
     
-    public func startShimmerAnimation(delay: Double = 0.2,
-                                      tint: UIColor = UIColor.init(red: 35/255.0, green: 39/255.0, blue: 47/255.0, alpha: 0.2),
-                                      highlight: UIColor = UIColor.init(red: 40/255.0, green: 45/255.0, blue: 53/255.0, alpha: 0.8),
-                                      highlightRatio: Double = 0.8,
-                                      widthRatio: CGFloat = 1,
-                                      heightRatio: CGFloat = 1,
-                                      alignment: NSTextAlignment = .center) {
+    public func startShimmerAnimation(delay: Double = AwesomeLoading.defaultShimmerDelay,
+                                      tint: UIColor = AwesomeLoading.defaultShimmerTint,
+                                      highlight: UIColor = AwesomeLoading.defaultShimmerHighlight,
+                                      highlightRatio: Double = AwesomeLoading.defaultShimmerHighlightRatio,
+                                      widthRatio: CGFloat = AwesomeLoading.defaultShimmerWidthRatio,
+                                      heightRatio: CGFloat = AwesomeLoading.defaultShimmerHeightRatio,
+                                      alignment: NSTextAlignment = AwesomeLoading.defaultShimmerAlignment) {
         stopShimmerAnimation()
         
         let shimmerView = ShimmerView()
