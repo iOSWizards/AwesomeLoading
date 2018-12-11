@@ -63,7 +63,7 @@ extension AwesomeLoadingView {
             // load default animation
             activityIndicator.center = self.center
             activityIndicator.hidesWhenStopped = true
-            activityIndicator.activityIndicatorViewStyle = .whiteLarge
+            activityIndicator.style = .whiteLarge
             activityIndicator.startAnimating()
             self.addSubview(activityIndicator)
         }
