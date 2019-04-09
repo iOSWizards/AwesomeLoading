@@ -11,8 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- iOS 9 or Higher
-- Swift 4
+- iOS 10 or Higher
+- Swift 4.2
 
 ## Installation
 
@@ -20,7 +20,7 @@ AwesomeLoading is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'AwesomeLoading', git: 'https://github.com/iOSWizards/AwesomeLoading', tag: '0.1.7'
+pod 'AwesomeLoading', git: 'https://github.com/iOSWizards/AwesomeLoading', tag: '0.1.8'
 ```
 ## Usage
 
