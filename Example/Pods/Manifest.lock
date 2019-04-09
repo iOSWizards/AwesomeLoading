@@ -1,7 +1,7 @@
 PODS:
   - AwesomeLoading (0.1.8):
     - lottie-ios
-  - lottie-ios (2.5.0)
+  - lottie-ios (3.0.3)
 
 DEPENDENCIES:
   - AwesomeLoading (from `../`)
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AwesomeLoading: e47bdb2dd3a3429e5fc29d76980d920fa73fb66a
-  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+  lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
 
 PODFILE CHECKSUM: 7473420c9a5dc1e28fde1065c9bb8d4dd8a65dbe
 
