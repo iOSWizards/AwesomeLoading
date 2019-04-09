@@ -1,19 +1,23 @@
 PODS:
-  - AwesomeLoading (0.1.0):
+  - AwesomeLoading (0.1.8):
     - lottie-ios
-  - lottie-ios (2.5.0)
+  - lottie-ios (3.0.3)
 
 DEPENDENCIES:
   - AwesomeLoading (from `../`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - lottie-ios
+
 EXTERNAL SOURCES:
   AwesomeLoading:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  AwesomeLoading: 8cd8c120b18dc273a0c2b6d1b1d28aef2f54d13a
-  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+  AwesomeLoading: e47bdb2dd3a3429e5fc29d76980d920fa73fb66a
+  lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
 
-PODFILE CHECKSUM: 0bb542d796984c686ab159be19b778612163a056
+PODFILE CHECKSUM: 7473420c9a5dc1e28fde1065c9bb8d4dd8a65dbe
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.6.0

@@ -17,7 +17,7 @@ class AwesomeLoadingView: UIView {
     fileprivate var animating = false
     fileprivate var maxScale: CGFloat = 1.0
     fileprivate var pulseTimer: Timer?
-    fileprivate var animationView: LOTAnimationView?
+    fileprivate var animationView: AnimationView?
     
     fileprivate let activityIndicator = UIActivityIndicatorView()
     
@@ -34,7 +34,7 @@ class AwesomeLoadingView: UIView {
 
 extension AwesomeLoadingView {
     
-    func show(json: [AnyHashable: Any]?, size: CGSize?) {
+    func show(animation: String?, size: CGSize?) {
         animating = true
         
         if self.frame.size.width < self.iconImageView.frame.size.width*1.2 {
@@ -57,8 +57,8 @@ extension AwesomeLoadingView {
         //pulse()
         //pulseTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(MVLoadingView.pulse), userInfo: nil, repeats: true)
         
-        if let json = json {
-            animationView = LOTAnimationView(json: json)
+        if let animation = animation {
+            animationView = AnimationView(name: animation)
         } else {
             // load default animation
             activityIndicator.center = self.center
@@ -68,7 +68,7 @@ extension AwesomeLoadingView {
             self.addSubview(activityIndicator)
         }
         if let animationView = self.animationView {
-            animationView.loopAnimation = true
+            animationView.loopMode = .loop
             animationView.animationSpeed = 1
             //animationView.frame = CGRect(x: (self.frame.size.width/2)-240, y: (self.frame.size.height/2)-135, width: 480, height: 270)
             self.addSubview(animationView)
@@ -143,13 +143,13 @@ extension UIView {
         DispatchQueue.main.async {
             let loadingView = AwesomeLoadingView.newInstance()
             
-            let jsonAnimation = FileLoader.shared.loadJSONFrom(file: json, fromBundle: bundle) as? [AnyHashable: Any]
+            //let jsonAnimation = FileLoader.shared.loadJSONFrom(file: json, fromBundle: bundle) as? [AnyHashable: Any]
             loadingView.frame = self.bounds
             self.addSubview(loadingView)
             
             loadingView.constraintToSuperview()
 
-            loadingView.show(json: jsonAnimation, size: size)
+            loadingView.show(animation: json, size: size)
         }
     }
     
